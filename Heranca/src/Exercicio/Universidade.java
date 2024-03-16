@@ -37,4 +37,16 @@ public class Universidade {
     public int getQntdProfessores() {
         return qntdProfessores;
     }
+
+    public void print(){
+        StringBuilder resumo = new StringBuilder();
+        resumo.append("Nome da Universidade: "+getNome()+"\n"+
+                "Endereço: " + getEndereco()+"\n"+
+                "Quantidade de Alunos: " +getQntdAlunos()+ "\n"+
+                "Quantidade de Professores" +getQntdProfessores()+ "\n");
+
+        System.out.print(resumo.toString());
+    }
+
+
 }
