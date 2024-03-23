@@ -23,13 +23,12 @@ public class Privada extends Universidade {
     @Override
     public void print() {
         StringBuilder resumo = new StringBuilder();
-        resumo.append("Nome da Universidade: "+getNome()+"\n"+
-                "Endereço: " + getEndereco()+"\n"+
-                "Quantidade de Alunos: " +getQntdAlunos()+ "\n"+
-                "Quantidade de Professores" +getQntdProfessores()+ "\n"+
-                "Valor da mensalidade: " +getMensalidade());
+        resumo.append("Nome da Universidade: " + getNome() + "\n" +
+                "Endereço: " + getEndereco() + "\n" +
+                "Quantidade de Alunos: " + getQntdAlunos() + "\n" +
+                "Quantidade de Professores" + getQntdProfessores() + "\n" +
+                "Valor da mensalidade: " + getMensalidade());
 
         System.out.print(resumo.toString());
-    }
     }
 }
