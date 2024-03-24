@@ -6,10 +6,13 @@ public class Estudante {
     private String nome;
     private Date dataDeNasc;
 
-    public Estudante(int matricula, String nome, Date dataDeNasc){
+    private String nomeDaTurma;
+
+    public Estudante(int matricula, String nome, Date dataDeNasc, String nomeDaTurma){
         this.matricula = matricula;
         this.nome = nome;
         this.dataDeNasc = dataDeNasc;
+        this.nomeDaTurma = nomeDaTurma;
     }
 
     public void setMatricula(int matricula) {
@@ -33,5 +36,13 @@ public class Estudante {
 
     public Date getDataDeNasc() {
         return dataDeNasc;
+    }
+
+    public void setNomeDaTurma(String nomeDaTurma) {
+        this.nomeDaTurma = nomeDaTurma;
+    }
+
+    public String getNomeDaTurma(){
+        return nomeDaTurma;
     }
 }
