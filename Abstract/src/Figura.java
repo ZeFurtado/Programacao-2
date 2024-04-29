@@ -1,5 +1,5 @@
 public abstract class Figura {
-    public String cor;
+    private String cor;
 
     public Figura(String cor){
         this.cor = cor;
