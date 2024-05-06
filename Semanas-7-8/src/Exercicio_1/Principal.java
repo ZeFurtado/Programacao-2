@@ -8,6 +8,7 @@ public class Principal {
 
         try{
             methods.pesquisaSequencial();
+            methods.pesquisaBinaria();
         }catch(IllegalArgumentException exception){
             System.out.println("O array não está ordenado");
         }
