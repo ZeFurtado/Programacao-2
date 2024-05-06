@@ -17,6 +17,16 @@ public class Methods {
 
     public void pesquisaSequencial() throws IllegalArgumentException{
         if(!arrayEhOrdenado()) throw new IllegalArgumentException();
+
+        int index = 0;
+        for(int i : array){
+            if(i == 95){
+                System.out.println(array[index] + " Achou!");
+                break;
+            }
+            System.out.println(array[index] + " Não é 95");
+            index++;
+        }
     }
 
     private boolean arrayEhOrdenado(){
