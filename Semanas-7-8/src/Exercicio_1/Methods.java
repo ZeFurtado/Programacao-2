@@ -2,9 +2,11 @@ package Exercicio_1;
 
 public class Methods {
     private int[] array;
+    private int target;
 
-    public Methods(int[] array){
+    public Methods(int[] array, int target){
         this.array = array;
+        this.target = target;
     }
 
     public void setArray(int[] array){
@@ -13,6 +15,14 @@ public class Methods {
 
     public int[] getArray() {
         return array;
+    }
+
+    public int getTarget() {
+        return target;
+    }
+
+    public void setTarget(int target) {
+        this.target = target;
     }
 
     public void pesquisaSequencial() throws IllegalArgumentException{
@@ -39,4 +49,6 @@ public class Methods {
         }
         return true;
     }
+
+
 }
