@@ -25,7 +25,7 @@ public class Methods {
         this.target = target;
     }
 
-    public void pesquisaSequencial() throws IllegalArgumentException{
+    public int pesquisaSequencial() throws IllegalArgumentException{
         System.out.println("///////// Pesquisa Sequencial");
         if(!arrayEhOrdenado()) throw new IllegalArgumentException();
 
@@ -33,20 +33,21 @@ public class Methods {
         for(int i : array){
             if(i == target){
                 System.out.println(array[index] + " Achou!");
-                break;
+                return index;
             }
             System.out.println(array[index] + " Não é "+target);
             index++;
         }
+        System.out.println("O número "+target+ " não está no Array");
+        return - 1;
     }
     public int pesquisaBinaria()throws IllegalArgumentException{
-        System.out.println("///////// Pesquisa Binária");
         if(!arrayEhOrdenado()) throw new IllegalArgumentException();
+        System.out.println("///////// Pesquisa Binária");
 
         int inf = 0;
         int sup = array.length - 1;
         int med;
-        int resultado = 0;
 
         while (inf <= sup){
             med = (inf + sup) / 2;
@@ -62,7 +63,7 @@ public class Methods {
                 return array[med];
             }
         }
-
+        System.out.println("O número "+target+ " não está no Array");
         return -1;
     }
 
@@ -75,6 +76,19 @@ public class Methods {
             i++;
         }
         return true;
+    }
+
+    public int[] insercaoDireta(){
+        for(int i=1; i < array.length; i++){
+            int j = i;
+            int b = array[i];
+            while ((j > 0) && (array[j - 1] > b)){
+                array[j] = array[j-1];
+                j--;
+            }
+            array[j] = b;
+        }
+        return array;
     }
 
 
