@@ -2,18 +2,11 @@ package Exercicio_1;
 
 public class Principal {
     public static void main(String[] args){
-        int[] array = {10,34,65,76,81,25,86,87,38,104,120};
+        SortMethods sortMethods = new SortMethods();
+        int[] array =  {4,-3,18,22,5,0,1,47,-2,9};
 
-        Methods methods = new Methods(array, 87);
-
-        try{
-            methods.pesquisaSequencial();
-            methods.pesquisaBinaria();
-        }catch(IllegalArgumentException exception){
-            System.out.println("O array não está ordenado");
-            methods = new Methods(methods.insercaoDireta(), 85);
-        }
-
-        methods.pesquisaBinaria();
+        sortMethods.insertionSort(array);
+        sortMethods.bubbleSort(array);
+        sortMethods.selectionSort(array);
     }
 }

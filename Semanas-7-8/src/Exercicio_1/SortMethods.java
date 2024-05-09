@@ -2,86 +2,111 @@ package Exercicio_1;
 
 public class SortMethods {
     public int[] insertionSort(int[] array) {
+    	int[] arrayInsertion = new int[array.length];
+    	int index = 0;
+    	for(int i : array) {
+    		arrayInsertion[index] = i;
+    		index++;
+    	}
+    	
+    	System.out.println();
         System.out.println("\\\\\\\\\\\\\\\\ Insertion Sort");
-        for(int num : array) {
+        for(int num : arrayInsertion) {
             System.out.print(num + " ");
         }
         System.out.print("\n");
 
-        for(int i = 1; i < array.length; i++) {
+        for(int i = 1; i < arrayInsertion.length; i++) {
             int j = i;
-            int b = array[i];
-            while((j > 0) && (array[j - 1] > b)) {
-                array[j] = array[j - 1];
+            int b = arrayInsertion[i];
+            while((j > 0) && (arrayInsertion[j - 1] > b)) {
+                arrayInsertion[j] = arrayInsertion[j - 1];
                 j--;
             }
-            array[j] = b;
-            for(int num : array) {
+            arrayInsertion[j] = b;
+            for(int num : arrayInsertion) {
                 System.out.print(num + " ");
             }
             System.out.print("\n");
         }
         System.out.println("\n");
-        return array;
+        return arrayInsertion;
     }
 
 
     public int[] bubbleSort(int[]array) {
-        System.out.println("\\\\\\\\ Bubble Sort");
-        for(int z : array) {
+    	int[] arrayBubble = new int[array.length];
+    	int index = 0;
+    	for(int i : array) {
+    		arrayBubble[index] = i;
+    		index++;
+    	}
+    	
+    	System.out.println();
+        System.out.println("\\\\\\\\\\\\ Bubble Sort");
+        for(int z : arrayBubble) {
             System.out.print(z + " ");
         }
         System.out.print("\n");
 
-        int i = array.length - 1;
+        int i = arrayBubble.length - 1;
         while(i > 0) {
             int lastFlipped = 0;
             for(int j = 0; j < i; j++) {
-                if(array[j] > array[j + 1]) {
-                    int t = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = t;
+                if(arrayBubble[j] > arrayBubble[j + 1]) {
+                    int t = arrayBubble[j];
+                    arrayBubble[j] = arrayBubble[j + 1];
+                    arrayBubble[j + 1] = t;
                     lastFlipped = j;
                 }
             }
             i = lastFlipped;
-            for(int z : array) {
+            for(int z : arrayBubble) {
                 System.out.print(z + " ");
             }
             System.out.print("\n");
         }
 
         System.out.println("\n");
-        return array;
+        return arrayBubble;
     }
 
 
     public int[] selectionSort(int[] array) {
+    	int[] arraySelection = new int[array.length];
+    	int index = 0;
+    	for(int i : array) {
+    		arraySelection[index] = i;
+    		index++;
+    	}
+    	
+    	System.out.println();
         System.out.println("\\\\\\\\\\\\\\\\ Selection Sort");
-        for(int s : array) {
+        for(int s : arraySelection) {
             System.out.print(s + " ");
         }
         System.out.print("\n");
 
-        int min;
-        for(int i = 0; i < array.length - 1; i++) {
+        int min = 0;
+        for(int i = 0; i < arraySelection.length - 1; i++) {
             min = i;
-            for(int j = min + 1; j < array.length; j++) {
-                if(array[j] < array[min]) {
+            for(int j = i + 1; j < arraySelection.length; j++) {
+                if(arraySelection[j] < arraySelection[min]) {
                     min = j;
                 }
-                int t = array[i];
-                array[i] = array[min];
-                array[min] = t;
             }
+            
+            int t = arraySelection[i];
+            arraySelection[i] = arraySelection[min];
+            arraySelection[min] = t;
 
-            for(int s : array) {
+            for(int s : arraySelection) {
                 System.out.print(s + " ");
             }
             System.out.print("\n");
         }
-
+        
         System.out.println("\n");
-        return array;
+        return arraySelection;
     }
 }

@@ -2,6 +2,8 @@ package Exercicio_1;
 
 public class SearchMethods {
     public int pesquisaSequencial(int[] array, int target){
+    	
+    	System.out.println();
         System.out.println("///////// Pesquisa Sequencial");
         int index = 0;
         for(int i : array){
@@ -16,6 +18,8 @@ public class SearchMethods {
         return - 1;
     }
     public int pesquisaBinaria(int[] array, int target){
+    	
+    	System.out.println();
         System.out.println("///////// Pesquisa Binária");
 
         int inf = 0;
