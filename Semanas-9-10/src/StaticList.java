@@ -97,4 +97,23 @@ public class StaticList<E> implements List<E> {
 			s += elements[i] + " ";
 		return s;
 	}
+
+	public int contaElementos(E el) throws IllegalArgumentException, UnderflowException{
+		if(isEmpty()) throw new UnderflowException();
+
+		return contaElementos(el, 0, 0);
+	}
+
+	private int contaElementos(E el, int pos, int numElementos){
+		if(pos == elements.length - 1) return numElementos;
+
+		if(el.equals(elements.getClass())){
+			pos++;
+			numElementos++;
+			return contaElementos(el, pos,numElementos);
+		}else{
+			pos++;
+			return contaElementos(el, pos, numElementos);
+		}
+	}
 }
