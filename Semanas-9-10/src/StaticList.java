@@ -107,10 +107,10 @@ public class StaticList<E> implements List<E> {
 	private int contaElementos(E el, int pos, int numElementos){
 		if(pos == elements.length - 1) return numElementos;
 
-		if(el.equals(elements.getClass())){
+		if(el.getClass().equals(elements[0].getClass())){
 			pos++;
 			numElementos++;
-			return contaElementos(el, pos,numElementos);
+			return contaElementos(el, pos, numElementos);
 		}else{
 			pos++;
 			return contaElementos(el, pos, numElementos);
