@@ -51,5 +51,24 @@ public class Principal {
         System.out.println(new Exercicios().exercicio4(lista1, lista2));
         */
 
+        //Exercicio 5
+        /*
+        Eletrodomestico eletro1 = new Eletrodomestico("Samsung", 220, 1999.99);
+        Eletrodomestico eletro2 = new Eletrodomestico("LG", 110, 1599.49);
+        Eletrodomestico eletro3 = new Eletrodomestico("Electrolux", 220, 2399.90);
+        Eletrodomestico eletro4 = new Eletrodomestico("Brastemp", 110, 1799.75);
+        Eletrodomestico eletro5 = new Eletrodomestico("Philco", 220, 899.00);
+        Eletrodomestico eletro6 = new Eletrodomestico("Panasonic", 110, 2499.99);
+
+        StaticList<Eletrodomestico> eletrodomesticos = new StaticList<Eletrodomestico>(6);
+        eletrodomesticos.insert(eletro1, 0);
+        eletrodomesticos.insert(eletro2, 0);
+        eletrodomesticos.insert(eletro3, 0);
+        eletrodomesticos.insert(eletro4, 0);
+        eletrodomesticos.insert(eletro5, 0);
+        eletrodomesticos.insert(eletro6, 0);
+
+        System.out.println(new Exercicios().contaEletrodomesticosCaros(eletrodomesticos, 2000.00));
+        */
     }
 }
