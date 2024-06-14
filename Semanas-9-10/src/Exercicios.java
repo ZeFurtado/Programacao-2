@@ -59,7 +59,7 @@ public class Exercicios {
             pos2++;
             return exercicio4(lista1, lista2, soma, pos1, pos2);
         }
-        
+
         return - 1;
     }
 
