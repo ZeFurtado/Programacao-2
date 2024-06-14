@@ -32,6 +32,14 @@ public class Eletrodomestico {
     public void setValor(double valor) {
         this.valor = valor;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Eletrodomestico{" +
+                "marca='" + marca + '\'' +
+                ", voltagem=" + voltagem +
+                ", valor=" + valor +
+                '}';
+    }
 }
 
