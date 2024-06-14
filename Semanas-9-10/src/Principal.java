@@ -51,6 +51,5 @@ public class Principal {
         System.out.println(new Exercicios().exercicio4(lista1, lista2));
         */
 
-
     }
 }
