@@ -19,17 +19,21 @@ public class Principal {
 
 
         //Exercicio 3
-        StaticList<Integer> lista = new StaticList<Integer>(3);
+        StaticList<Integer> lista = new StaticList<Integer>(4);
 
-        lista.insert(5, 0);
-        lista.insert(11, 1);
-        lista.insert(-0, 2);
+        lista.insert(22, 0);
+        lista.insert(21, 0);
+        lista.insert(19, 0);
+        lista.insert(12, 0);
+
 
         System.out.println(new Exercicios().isPrimo(lista.get(0)));
         System.out.println(new Exercicios().isPrimo(lista.get(1)));
         System.out.println(new Exercicios().isPrimo(lista.get(2)));
 
+        new Exercicios().removePrimos(lista);
 
+        System.out.println(lista.toString());
 
     }
 }

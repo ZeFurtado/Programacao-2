@@ -26,4 +26,16 @@ public class Exercicios {
         }
         return true;
     }
+
+    public void removePrimos(StaticList<Integer> lista){
+        int pos = 0;
+        while(pos < lista.numElements()){
+            if(isPrimo(lista.get(pos))){
+                lista.remove(pos);
+                pos--;
+            }else{
+                pos++;
+            }
+        }
+    }
 }
