@@ -20,11 +20,15 @@ public class Exercicios {
     }
 
     public boolean isPrimo(int num){
-        if(num <= 0)return false;
-        for(int n = 2; n < num; n++){
-            if(num % n == 0) return false;
+        if(num == 0 || num == 1) return false;
+        else {
+            int fim;
+            fim = (int)Math.sqrt(num);
+            for(int i = 2; i <=fim; i++){
+                if(num % i == 0) return false;
+            }
+            return true;
         }
-        return true;
     }
 
     public void removePrimos(StaticList<Integer> lista){
