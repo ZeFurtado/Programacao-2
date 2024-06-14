@@ -1,6 +1,5 @@
 public class Principal {
     public static void main(String[] args) {
-
         /* Exercicio 2
         StaticList<Integer> lista = new StaticList<Integer>(10);
 
@@ -32,6 +31,26 @@ public class Principal {
 
         System.out.println(lista.toString());
          */
-        
+
+        //Exercicio 4
+        /*
+        StaticList<Integer> lista1 = new StaticList<Integer>(5);
+        StaticList<Integer> lista2 = new StaticList<Integer>(3);
+
+        lista2.insert(10, 0);
+        lista2.insert(25, 0);
+        lista2.insert(20, 0);
+
+
+        lista1.insert(3,0);
+        lista1.insert(1,0);
+        lista1.insert(2,0);
+        lista1.insert(30, 0);
+        lista1.insert(5, 0);
+
+        System.out.println(new Exercicios().exercicio4(lista1, lista2));
+        */
+
+
     }
 }
