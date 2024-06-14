@@ -34,9 +34,8 @@ public class Exercicios {
     public void removePrimos(StaticList<Integer> lista){
         int pos = 0;
         while(pos < lista.numElements()){
-            if(isPrimo(lista.get(pos))){
+            if(isPrimo(lista.get(pos))) {
                 lista.remove(pos);
-                pos--;
             }else{
                 pos++;
             }
