@@ -63,4 +63,14 @@ public class Exercicios {
         return - 1;
     }
 
+    public int contaEletrodomesticosCaros(StaticList<Eletrodomestico> eletrodoemsticos, double valorLimite){
+        int eletrodomesticosCaros = 0;
+        for(int i = 0; i < eletrodoemsticos.numElements(); i++){
+            if(eletrodoemsticos.get(i).getValor() > valorLimite){
+                eletrodomesticosCaros++;
+            }
+        }
+        return eletrodomesticosCaros;
+    }
+
 }
